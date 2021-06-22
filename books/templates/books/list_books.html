@@ -1,0 +1,15 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+{% for books in books %}
+<article class="post">
+  <time class="date">
+    {{ books.created_at }}
+  </time>
+  <h2><a href="">{{ books.title }}</a></h2>
+  <h3>{{ books.author }}</h3>
+  <p><{{ books.description }}</p>
+
+</article>
+{% endfor %}
+{% endblock %}

@@ -1,6 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.list_books, name='list_books'),
+    path("", views.homepage, name='home'),
+    path("accounts/", include('registration.backends.default.urls')),
+    path("list/", views.list_books, name='list_books'),
 ]

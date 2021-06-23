@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class= flex two"
 {% for book in books %}
 <article class="post">
   <time class="date">
@@ -8,7 +9,6 @@
   </time>
   <h2><a href="">{{ book.title }}</a></h2>
   <h3>{{ book.author }}</h3>
-  <p>{{ book.description }}</p>
 
 </article>
 {% endfor %}
